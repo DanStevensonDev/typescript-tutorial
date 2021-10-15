@@ -1,3 +1,5 @@
-const a = "1";
-console.log("a === ", a)
+const getFullName = (firstname: string, lastname: string): string => {
+    return firstname + " " + lastname
+}
 
+console.log(getFullName("Dan", "Stevenson"))

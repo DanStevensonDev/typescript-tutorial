@@ -1,2 +1,4 @@
-var a = "1";
-console.log("a === ", a);
+var getFullName = function (firstname, lastname) {
+    return firstname + " " + lastname;
+};
+console.log(getFullName("Dan", "Stevenson"));

@@ -1,4 +1,8 @@
-class User {
+interface UserInterface {
+    getFullName(): string
+}
+
+class User implements UserInterface {
     private firstName: string
     private lastName: string
     readonly unchangeableName: string
@@ -10,6 +14,7 @@ class User {
         this.unchangeableName = firstName
     }
 
+    // "implements" makes this function required, since it is in the interface
     getFullName(): string {
         return this.firstName + " " + this.lastName
     }
@@ -17,9 +22,3 @@ class User {
 
 const user = new User("Dan", "Stevenson")
 console.log(user.getFullName())
-
-// accessible only on the class
-console.log(User.maxAge)
-
-// not on the instance
-// console.log(user.maxAge)

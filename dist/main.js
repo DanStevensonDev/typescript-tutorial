@@ -4,6 +4,7 @@ var User = /** @class */ (function () {
         this.lastName = lastName;
         this.unchangeableName = firstName;
     }
+    // "implements" makes this function required, since it is in the interface
     User.prototype.getFullName = function () {
         return this.firstName + " " + this.lastName;
     };
@@ -12,7 +13,3 @@ var User = /** @class */ (function () {
 }());
 var user = new User("Dan", "Stevenson");
 console.log(user.getFullName());
-// accessible only on the class
-console.log(User.maxAge);
-// not on the instance
-// console.log(user.maxAge)

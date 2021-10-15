@@ -1,24 +1,9 @@
-type ID = string;
-type PopularTag = string;
-type MaybePopularTag = string | null;
+let vAny: any = 10
+let vUnknown: unknown = 10
 
-interface UserInterface {
-    id: ID;
-    name: string;
-    surname: string;
-}
+let s1: string = vAny
+let s2: string = vUnknown as string
 
-const popularTags: PopularTag[] = ["tea", "coffee"]
+let pageNumber: string = "1"
+let numericPageNumber: number = (pageNumber as unknown) as number
 
-const coffeeTag: MaybePopularTag = null
-
-let username: string = "alex"
-
-let pageName: string | number = "1"
-
-let errorMessage: string | null = null
-
-let user: UserInterface | null = null
-
-// avoid this! 
-let someProp: string | number | null | undefined | string[] | object

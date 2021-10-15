@@ -1,14 +1,24 @@
-// postfixed with "Interface" to distinguish from classes
+type ID = string;
+type PopularTag = string;
+type MaybePopularTag = string | null;
+
 interface UserInterface {
+    id: ID;
     name: string;
-    age?: number;
+    surname: string;
 }
 
-const user1: UserInterface = {
-    name: "Joe Bloggs",
-    age: 99,
-}
+const popularTags: PopularTag[] = ["tea", "coffee"]
 
-const user2: UserInterface = {
-    name: "Dan Stevenson",
-}
+const coffeeTag: MaybePopularTag = null
+
+let username: string = "alex"
+
+let pageName: string | number = "1"
+
+let errorMessage: string | null = null
+
+let user: UserInterface | null = null
+
+// avoid this! 
+let someProp: string | number | null | undefined | string[] | object

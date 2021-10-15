@@ -1,5 +1,12 @@
-var someElement = document.querySelector(".foo");
-someElement.addEventListener("blur", function (event) {
-    var target = event.target;
-    console.log("event", target.value);
-});
+var User = /** @class */ (function () {
+    function User(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    User.prototype.getFullName = function () {
+        return this.firstName + " " + this.lastName;
+    };
+    return User;
+}());
+var user = new User("Dan", "Stevenson");
+console.log(user.getFullName());
